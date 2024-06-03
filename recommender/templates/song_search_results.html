@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Search Results</title>
+</head>
+<body>
+    <h1>Song Search Results</h1>
+    <ul>
+        {% for song in songs %}
+            <li>
+                <img src="{{ song.album.images.0.url }}" alt="{{ song.name }}">
+                <p>Song: {{ song.name }}</p>
+                <p>Artists: 
+                    {% for artist in song.artists %}
+                        {{ artist.name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <p>Album: {{ song.album.name }}</p>
+                <a href="{% url 'song_details' song.id %}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
