@@ -125,6 +125,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-SPOTIPY_CLIENT_ID = os.getenv('140259c128a34245b6e8be78e47aadf2')
-SPOTIPY_CLIENT_SECRET = os.getenv('6d5414ddba994e6191bdf59e48fab5ea')
+SPOTIPY_CLIENT_ID = os.getenv('')
+SPOTIPY_CLIENT_SECRET = os.getenv('')
 SPOTIPY_REDIRECT_URI = 'http://localhost:8000/callback/'
