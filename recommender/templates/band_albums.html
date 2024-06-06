@@ -1,0 +1,14 @@
+{% extends "search_band.html" %}
+{% block content %}
+    <a href="{% url 'recommendations' artist_id %}">See Recommendations</a>
+    <h1>{{ band_name }}'s Albums</h1>
+    <ul>
+        {% for album in albums %}
+            <li>
+                <img src="{{ album.cover }}" alt="{{ album.name }}" />
+                <p>Album: {{ album.name }}</p>
+                <p>Genres: {{ album.genres }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% block content %}
+    <a href="{% url 'search_band' %}">Go Back to Search Page</a>
+    <h1>Recommendations for {{ artist_name }}</h1>
+    <ul>
+        {% for rec in recommendations %}
+        <li>
+            <img src="{{ rec.cover }}" alt="{{ rec.name }}">
+            <p>Album: {{ rec.name }}</p>
+            <p>Band: {{ rec.artist_name }}</p>
+            <p>Genres: {{ rec.genres }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+

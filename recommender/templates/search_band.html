@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Artist</title>
+        <style>
+        .search-container {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1><u>Search for an Artist (Case Matters)</u></h1>
+        <form method="post" action="{% url 'search_band' %}">
+            {% csrf_token %}
+            <div class="search-container">
+                {{ form.as_p }}
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </body>
+</html>
