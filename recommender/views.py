@@ -119,8 +119,8 @@ def recommendations(request, artist_id):
                     }
                 )
     
-    # Limit to 30 recommendations
-    recommendations = recommendations[:37]
+    # Limit to 15 recommendations
+    recommendations = recommendations[:15]
 
     # Render recommendations template with artist and recommendations data
     return render(
