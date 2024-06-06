@@ -125,7 +125,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-<<<<<<< HEAD
 SPOTIPY_CLIENT_ID = os.getenv('2da61999a9624632b6efcc370ea3ce46')
 SPOTIPY_CLIENT_SECRET = os.getenv('6649cb64a9af48d19e343f21b5534c12')
 SPOTIPY_REDIRECT_URI = 'https://localhost:8000/callback/'
@@ -148,8 +147,3 @@ LOGGING = {
         },
     },
 }
-=======
-SPOTIPY_CLIENT_ID = os.getenv('')
-SPOTIPY_CLIENT_SECRET = os.getenv('')
-SPOTIPY_REDIRECT_URI = 'http://localhost:8000/callback/'
->>>>>>> d369fc8ec3d5f390df6c08c6595d52c2a28aa697
