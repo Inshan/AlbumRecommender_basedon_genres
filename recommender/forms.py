@@ -1,4 +1,4 @@
 from django import forms
 
-class SongSearchForm(forms.Form):
-    song_name = forms.CharField(label='Song Name', max_length=100)
+class BandSearchForm(forms.Form):
+    band_name = forms.CharField(label='Artist Name', max_length=100)

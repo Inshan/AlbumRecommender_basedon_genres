@@ -4,7 +4,7 @@ from sklearn.neighbors import NearestNeighbors
 import joblib
 
 # Load the data from CSV
-df = pd.read_csv('./recommender/artists_data.csv')
+df = pd.read_csv('./data/artists_data.csv')
 
 # Combine genres into a single string for each artist
 df['genres_str'] = df['genres']

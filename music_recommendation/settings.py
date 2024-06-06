@@ -125,6 +125,25 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-SPOTIPY_CLIENT_ID = os.getenv('140259c128a34245b6e8be78e47aadf2')
-SPOTIPY_CLIENT_SECRET = os.getenv('6d5414ddba994e6191bdf59e48fab5ea')
-SPOTIPY_REDIRECT_URI = 'http://localhost:8000/callback/'
+SPOTIPY_CLIENT_ID = os.getenv('2da61999a9624632b6efcc370ea3ce46')
+SPOTIPY_CLIENT_SECRET = os.getenv('6649cb64a9af48d19e343f21b5534c12')
+SPOTIPY_REDIRECT_URI = 'https://localhost:8000/callback/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

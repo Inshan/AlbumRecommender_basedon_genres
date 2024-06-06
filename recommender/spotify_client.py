@@ -4,6 +4,6 @@ from django.conf import settings
 
 def get_spotify_client():
     auth_manager = SpotifyClientCredentials(
-        client_id='140259c128a34245b6e8be78e47aadf2',
-        client_secret='7ed5430949f24d7ca4fc340e6748630b')
+        client_id='2da61999a9624632b6efcc370ea3ce46',
+        client_secret='6649cb64a9af48d19e343f21b5534c12')
     return spotipy.Spotify(auth_manager=auth_manager)
