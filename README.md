@@ -1,1 +1,1 @@
-# SongRecommender
+Album Recommender using Spotipy.
